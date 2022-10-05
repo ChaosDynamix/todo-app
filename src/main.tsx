@@ -1,20 +1,19 @@
-import '@assets/styles/main.css';
-import Page from '@components/page';
+import App from "@components/App";
 import reducer from "@reducers/root-reducer";
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom/client";
 import {Provider} from "react-redux";
 import {configureStore} from "@reduxjs/toolkit";
+import "./main.css";
 
 const store = configureStore({
   reducer: reducer,
 });
 
-ReactDOM.render(
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <Provider store={store}>
-      <Page/>
+      <App />
     </Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
-)
+  </React.StrictMode>
+);

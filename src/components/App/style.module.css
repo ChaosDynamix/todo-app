@@ -1,0 +1,15 @@
+.page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 4rem;
+  padding-bottom: 6.4rem;
+  transition: background-color 150ms;
+  background-color: var(--color-background);
+}
+
+@media screen and (min-width: 588px) {
+  .page {
+    padding-top: 7.2rem;
+  }
+}

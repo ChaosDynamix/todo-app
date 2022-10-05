@@ -1,0 +1,9 @@
+.tip {
+  width: 100%;
+  height: auto;
+  margin: 4rem 0 0 0;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--color-text-alt);
+}

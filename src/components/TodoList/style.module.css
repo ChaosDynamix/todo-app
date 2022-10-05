@@ -1,0 +1,6 @@
+.todoList {
+  width: 100%;
+  height: auto;
+  background-color: var(--color-list);
+  padding-bottom: 0.1rem;
+}

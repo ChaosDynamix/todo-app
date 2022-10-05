@@ -1,0 +1,66 @@
+:root {
+  --color-blue: hsl(220, 98%, 61%);
+  --color-cyan: hsl(192, 100%, 67%);
+  --color-pink: hsl(280, 87%, 65%);
+  --color-white: hsl(0, 0%, 100%);
+
+  --color-foreground: hsl(0, 0%, 100%);
+  --color-background: hsl(0, 0%, 98%);
+  --color-text: hsl(235, 19%, 35%);
+  --color-text-alt: hsl(236, 9%, 61%);
+  --color-list: hsl(233, 11%, 84%);
+}
+
+:root.dark {
+  --color-foreground: hsl(235, 24%, 19%);
+  --color-background: hsl(235, 21%, 11%);
+  --color-text: hsl(234, 39%, 85%);
+  --color-text-alt: hsl(234, 11%, 52%);
+  --color-list: hsl(237, 14%, 26%);
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-family:
+    'Josefin Sans',
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji';
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+input {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
