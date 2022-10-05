@@ -1,28 +1,28 @@
 .header {
   width: 100%;
   height: auto;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1rem; /* 16px */
 }
 
 .header__title {
-  font-size: 2.8rem;
+  font-size: 1.75rem; /* 28px */
   font-weight: 700;
-  letter-spacing: 0.9rem;
+  letter-spacing: 0.5625rem; /* 9px */
   text-transform: uppercase;
   color: var(--color-white);
-  margin: 0.8rem 0 0 0;
+  margin: 0.5rem 0 0 0; /* 8px 0 0 0 */
 }
 
 .header__button {
   display: flex;
-  width: 4.8rem;
-  height: 4.8rem;
-  border-radius: 2.4rem;
-  margin-right: -1.4rem;
+  width: 3rem; /* 48px */
+  height: 3rem; /* 48px */
+  border-radius: 1.5rem; /* 24px */
+  margin-right: -0.875rem; /* -14px */
 }
 
 .header__icon {
-  width: 2rem;
+  width: 1.25rem; /* 20px */
   height: auto;
   color: var(--color-white);
   margin: auto;
@@ -30,19 +30,19 @@
 
 @media screen and (min-width: 588px) {
   .header {
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem; /* 40px */
   }
 
   .header__title {
-    font-size: 4rem;
-    letter-spacing: 1.5rem;
+    font-size: 2.5rem; /* 40px */
+    letter-spacing: 0.9375rem; /* 15px */
   }
 
   .header__button {
-    margin-right: -1rem;
+    margin-right: -0.625rem; /* -10px */
   }
 
   .header__icon {
-    width: 2.8rem;
+    width: 1.75rem; /* 28px */
   }
 }

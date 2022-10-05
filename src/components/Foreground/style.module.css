@@ -1,7 +1,7 @@
 .foreground {
   width: 100%;
   height: auto;
-  border-radius: 0.6rem;
+  border-radius: 0.375rem; /* 6px */
   overflow: hidden;
   transition: background-color;
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
@@ -9,12 +9,12 @@
 }
 
 .foreground_margin {
-  margin-bottom: 1.6rem;
+  margin-bottom: 1rem; /* 16px */
 }
 
 @media screen and (min-width: 588px) {
   .foreground_margin {
-    margin-bottom: 2.4rem;
+    margin-bottom: 1.5rem; /* 24px */
   }
 
   .foreground_mobile {

@@ -27,7 +27,7 @@ const App: FunctionComponent = () => {
   }
 
   return (
-    <div className={classes.page}>
+    <div className={classes.app}>
       <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
       <Background isDarkMode={isDarkMode}/>
       <Container>

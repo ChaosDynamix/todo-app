@@ -2,6 +2,7 @@ import { createSelector } from 'reselect';
 import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from '@constants/todo-filters';
 
 const getVisibilityFilter = (state) => state.visibilityFilter;
+
 const getTodos = (state) => state.todos;
 
 export const getVisibleTodos = createSelector(
@@ -18,7 +19,7 @@ export const getVisibleTodos = createSelector(
                 throw new Error('Unknown filter: ' + visibilityFilter)
         }
     }
-)
+);
 
 export const getCompletedTodoCount = createSelector(
     [getTodos],
@@ -28,4 +29,4 @@ export const getCompletedTodoCount = createSelector(
             0
         )
     )
-)
+);
