@@ -1,6 +1,15 @@
+import { FunctionComponent } from "react";
 import classes from "./style.module.css";
 
-function Switch({id, checked, onChange, onClick, readOnly}) {
+interface Props {
+  id: string;
+  checked: boolean;
+  onChange: () => void;
+  onClick: () => void;
+  readOnly: boolean;
+}
+
+const Switch: FunctionComponent<Props> = ({id, checked, onChange, onClick, readOnly}) => {
   return (
     <div className={classes.switch}>
       <input

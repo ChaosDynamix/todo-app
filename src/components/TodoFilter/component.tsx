@@ -1,7 +1,8 @@
 import classNames from "classnames";
+import { FunctionComponent } from "react";
 import classes from "./style.module.css";
 
-function TodoFilter({active, children, setFilter}) {
+const TodoFilter: FunctionComponent = ({active, children, setFilter}) => {
   const activeClassNames = classNames([
     classes.todoFilter,
     {

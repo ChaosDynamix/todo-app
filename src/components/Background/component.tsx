@@ -3,8 +3,13 @@ import mobileDarkBackground from "@images/bg-mobile-dark.jpg";
 import desktopLightBackground from "@images/bg-desktop-light.jpg";
 import desktopDarkBackground from "@images/bg-desktop-dark.jpg";
 import classes from "./style.module.css";
+import { FunctionComponent } from "react";
 
-function Background({ isDarkMode }) {
+interface Props {
+  isDarkMode: boolean;
+}
+
+const Background: FunctionComponent<Props> = ({ isDarkMode }) => {
   return (
     <picture className={classes.background}>
       <source

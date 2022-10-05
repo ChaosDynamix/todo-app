@@ -1,7 +1,13 @@
 import Container from "@components/Container";
+import { FunctionComponent } from "react";
 import classes from "./style.module.css";
 
-function Header({ isDarkMode, toggleDarkMode }) {
+interface Props {
+  isDarkMode: boolean;
+  toggleDarkMode: () => void;
+}
+
+const Header: FunctionComponent<Props> = ({ isDarkMode, toggleDarkMode }) => {
   return (
     <header className={classes.header}>
       <Container flex>

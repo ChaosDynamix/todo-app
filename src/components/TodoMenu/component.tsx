@@ -1,8 +1,9 @@
 import TodoFilterList from "@components/TodoFilterList";
 import classes from "./style.module.css";
 import classNames from "classnames";
+import { FunctionComponent } from "react";
 
-function TodoMenu({ completedCount, activeCount, onClearCompleted }) {
+const TodoMenu: FunctionComponent = ({ completedCount, activeCount, onClearCompleted }) => {
   const itemWord = activeCount === 1 ? 'item' : 'items';
 
   return (

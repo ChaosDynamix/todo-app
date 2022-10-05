@@ -1,8 +1,13 @@
 import Switch from "@components/Switch";
 import classes from "./style.module.css";
 import classNames from "classnames";
+import { FunctionComponent } from "react";
 
-function Todo({id, todo, completeTodo, deleteTodo}) {
+interface Props {
+  id: string;
+}
+
+const Todo: FunctionComponent<Props> = ({id, todo, completeTodo, deleteTodo}) => {
   const todoContentClasses = classNames([
     classes.todo__content,
     {

@@ -1,7 +1,7 @@
 import Header from "@components/Header";
 import TodoInput from "@containers/todo-input";
 import TodoList from "@containers/todo-list";
-import {useEffect, useState} from "react";
+import {FunctionComponent, useEffect, useState} from "react";
 import Background from "@components/Background";
 import Container from "@components/Container";
 import Foreground from "@components/Foreground";
@@ -9,8 +9,8 @@ import TodoFilters from "@components/TodoFilterList";
 import Tip from "@components/Tip";
 import classes from "./style.module.css";
 
-function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+const App: FunctionComponent = () => {
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
   useEffect(() => {
     if (isDarkMode) {

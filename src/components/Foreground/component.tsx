@@ -1,7 +1,13 @@
 import classes from "./style.module.css";
 import classNames from "classnames";
+import { FunctionComponent, PropsWithChildren } from "react";
 
-function Foreground({ children, margin, mobile }) {
+interface Props {
+  margin: boolean;
+  mobile: boolean;
+}
+
+const Foreground: FunctionComponent<PropsWithChildren<Props>> = ({ children, margin, mobile }) => {
   const activeClasses = classNames([
     classes.foreground,
     {

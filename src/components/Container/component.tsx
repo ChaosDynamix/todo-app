@@ -1,7 +1,12 @@
 import classes from "./style.module.css";
 import classNames from "classnames";
+import { FunctionComponent, PropsWithChildren } from "react";
 
-function Container({ children, flex }) {
+interface Props {
+  flex: boolean;
+}
+
+const Container: FunctionComponent<PropsWithChildren<Props>> = ({ children, flex }) => {
   const activeClassNames = classNames([
     classes.container,
     {

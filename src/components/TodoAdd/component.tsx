@@ -1,11 +1,11 @@
 import Switch from "@components/Switch"
-import {useState} from "react";
+import React, {FunctionComponent, useState} from "react";
 import classes from "./style.module.css";
 
-function TodoAdd({actions, todosCount, completedCount}) {
+const TodoAdd: FunctionComponent = ({actions, todosCount, completedCount}) => {
   const [text, setText] = useState("");
 
-  function handleSubmit(event) {
+  function handleKeydown(event: React.SyntheticEvent<HTMLInputElement, KeyboardEvent>) {
     const userInput = event.target.value.trim();
     if (event.key === "Enter") {
       if (userInput.length > 0) {
@@ -29,7 +29,7 @@ function TodoAdd({actions, todosCount, completedCount}) {
       />
       <input
         onChange={handleChange}
-        onKeyDown={handleSubmit}
+        onKeyDown={handleKeydown}
         value={text}
         className={classes.todoAdd__input}
         type="text"

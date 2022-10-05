@@ -1,8 +1,9 @@
 import Todo from "@components/Todo";
 import TodoMenu from "@components/TodoMenu";
+import { FunctionComponent } from "react";
 import classes from "./style.module.css";
 
-function TodoList({filteredTodos, todosCount, completedCount, actions}) {
+const TodoList: FunctionComponent = ({filteredTodos, todosCount, completedCount, actions}) => {
   return (
     <>
       {
