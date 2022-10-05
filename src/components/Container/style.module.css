@@ -10,7 +10,7 @@
   padding-right: 1.5rem; /* 24px */
 }
 
-.container_flex {
+.container--flex {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

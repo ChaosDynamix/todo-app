@@ -10,7 +10,7 @@ const Container: FunctionComponent<PropsWithChildren<Props>> = ({ children, flex
   const activeClassNames = classNames([
     classes.container,
     {
-      [classes.container_flex]: flex,
+      [classes["container--flex"]]: flex,
     }
   ]);
 
