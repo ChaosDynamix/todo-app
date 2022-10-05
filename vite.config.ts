@@ -15,6 +15,7 @@ export default defineConfig({
       '@reducers': resolve(__dirname, 'src/reducers'),
       '@actions': resolve(__dirname, 'src/actions'),
       '@selectors': resolve(__dirname, 'src/selectors'),
+      '@styles': resolve(__dirname, 'src/styles'),
     },
   },
 })

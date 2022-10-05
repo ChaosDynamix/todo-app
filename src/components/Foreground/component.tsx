@@ -3,11 +3,11 @@ import classNames from "classnames";
 import { FunctionComponent, PropsWithChildren } from "react";
 
 interface Props {
-  margin: boolean;
-  mobile: boolean;
+  margin?: boolean;
+  mobile?: boolean;
 }
 
-const Foreground: FunctionComponent<PropsWithChildren<Props>> = ({ children, margin, mobile }) => {
+const Foreground: FunctionComponent<PropsWithChildren<Props>> = ({ children, margin = false, mobile = false }) => {
   const activeClasses = classNames([
     classes.foreground,
     {

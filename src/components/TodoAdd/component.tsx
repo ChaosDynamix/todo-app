@@ -1,12 +1,17 @@
 import Switch from "@components/Switch"
-import React, {FunctionComponent, useState} from "react";
+import { ChangeEvent, FunctionComponent, KeyboardEvent, useState } from "react";
 import classes from "./style.module.css";
 
-const TodoAdd: FunctionComponent = ({actions, todosCount, completedCount}) => {
+interface Props {
+  todosCount: number;
+  completedCount: number;
+}
+
+const TodoAdd: FunctionComponent<Props> = ({actions, todosCount, completedCount}) => {
   const [text, setText] = useState("");
 
-  function handleKeydown(event: React.SyntheticEvent<HTMLInputElement, KeyboardEvent>) {
-    const userInput = event.target.value.trim();
+  function handleKeydown(event: KeyboardEvent<HTMLInputElement>) {
+    const userInput = event.currentTarget.value.trim();
     if (event.key === "Enter") {
       if (userInput.length > 0) {
         actions.addTodo(userInput);
@@ -15,8 +20,8 @@ const TodoAdd: FunctionComponent = ({actions, todosCount, completedCount}) => {
     }
   }
 
-  function handleChange(event) {
-    setText(event.target.value);
+  function handleChange(event: ChangeEvent<HTMLInputElement>) {
+    setText(event.currentTarget.value);
   }
 
   return (

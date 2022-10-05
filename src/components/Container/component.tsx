@@ -3,10 +3,10 @@ import classNames from "classnames";
 import { FunctionComponent, PropsWithChildren } from "react";
 
 interface Props {
-  flex: boolean;
+  flex?: boolean;
 }
 
-const Container: FunctionComponent<PropsWithChildren<Props>> = ({ children, flex }) => {
+const Container: FunctionComponent<PropsWithChildren<Props>> = ({ children, flex = false }) => {
   const activeClassNames = classNames([
     classes.container,
     {

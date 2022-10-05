@@ -3,7 +3,12 @@ import classes from "./style.module.css";
 import classNames from "classnames";
 import { FunctionComponent } from "react";
 
-const TodoMenu: FunctionComponent = ({ completedCount, activeCount, onClearCompleted }) => {
+interface Props {
+  completedCount: number;
+  activeCount: number;
+}
+
+const TodoMenu: FunctionComponent<Props> = ({ completedCount, activeCount, onClearCompleted }) => {
   const itemWord = activeCount === 1 ? 'item' : 'items';
 
   return (

@@ -1,8 +1,12 @@
 import classNames from "classnames";
-import { FunctionComponent } from "react";
+import { FunctionComponent, PropsWithChildren } from "react";
 import classes from "./style.module.css";
 
-const TodoFilter: FunctionComponent = ({active, children, setFilter}) => {
+interface Props {
+  active: boolean;
+}
+
+const TodoFilter: FunctionComponent<PropsWithChildren<Props>> = ({active, children, setFilter}) => {
   const activeClassNames = classNames([
     classes.todoFilter,
     {

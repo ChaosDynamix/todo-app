@@ -1,16 +1,16 @@
 import { connect } from "react-redux";
 import TodoAdd from "@components/TodoAdd";
 import { getCompletedTodoCount } from "@selectors/selectors";
-import {ActionCreator, bindActionCreators} from "redux";
+import { bindActionCreators } from "redux";
 import * as TodoActions from "@actions/index";
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   todosCount: state.todos.length,
   completedCount: getCompletedTodoCount(state)
 })
 
-const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators(TodoActions as ActionCreator<unknown>, dispatch)
+const mapDispatchToProps = (dispatch) => ({
+  actions: bindActionCreators(TodoActions, dispatch)
 })
 
 export default connect(

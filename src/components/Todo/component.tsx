@@ -5,6 +5,7 @@ import { FunctionComponent } from "react";
 
 interface Props {
   id: string;
+  todo: AppData.Todo;
 }
 
 const Todo: FunctionComponent<Props> = ({id, todo, completeTodo, deleteTodo}) => {

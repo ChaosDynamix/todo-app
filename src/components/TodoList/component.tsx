@@ -3,7 +3,13 @@ import TodoMenu from "@components/TodoMenu";
 import { FunctionComponent } from "react";
 import classes from "./style.module.css";
 
-const TodoList: FunctionComponent = ({filteredTodos, todosCount, completedCount, actions}) => {
+interface Props {
+  filteredTodos: AppData.Todo[];
+  todosCount: number;
+  completedCount: number;
+}
+
+const TodoList: FunctionComponent<Props> = ({filteredTodos, todosCount, completedCount, actions}) => {
   return (
     <>
       {

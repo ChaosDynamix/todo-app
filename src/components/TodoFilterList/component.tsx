@@ -3,7 +3,11 @@ import {SHOW_ACTIVE, SHOW_ALL, SHOW_COMPLETED} from "@constants/todo-filters";
 import classes from "./style.module.css";
 import { FunctionComponent } from "react";
 
-const FILTER_TITLES = {
+interface Filters {
+  [key: string]: string;
+}
+
+const FILTER_TITLES: Filters = {
   [SHOW_ALL]: 'All',
   [SHOW_ACTIVE]: 'Active',
   [SHOW_COMPLETED]: 'Completed'
