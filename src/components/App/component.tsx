@@ -11,7 +11,10 @@ import classes from "./style.module.css";
 import useLocalStorage from "@hooks/use-local-storage";
 
 const App: FunctionComponent = () => {
-  const [theme, setTheme] = useLocalStorage("todo-app-theme", "light");
+  const [theme, setTheme] = useLocalStorage(
+    "todo-app-theme",
+    window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+  );
 
   useEffect(() => {
     if (theme === "dark") {
