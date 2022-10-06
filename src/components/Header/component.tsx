@@ -16,7 +16,7 @@ const Header: FunctionComponent<Props> = ({ theme, setTheme }) => {
   return (
     <header className={classes.header}>
       <Container flex>
-        <h2 className={classes.header__title}>todo</h2>
+        <h1 className={classes.header__title}>todo</h1>
         <button className={classes.header__button} onClick={handleButtonClick}>
           {
             theme === "dark"

@@ -25,7 +25,7 @@ const App: FunctionComponent = () => {
   }, [theme]);
 
   return (
-    <div className={classes.app}>
+    <main className={classes.app}>
       <Header theme={theme} setTheme={setTheme}/>
       <Background theme={theme}/>
       <Container>
@@ -40,7 +40,7 @@ const App: FunctionComponent = () => {
         </Foreground>
         <Tip/>
       </Container>
-    </div>
+    </main>
   );
 }
 
