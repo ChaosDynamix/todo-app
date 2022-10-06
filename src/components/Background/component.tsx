@@ -6,19 +6,19 @@ import classes from "./style.module.css";
 import { FunctionComponent } from "react";
 
 interface Props {
-  isDarkMode: boolean;
+  theme: string;
 }
 
-const Background: FunctionComponent<Props> = ({ isDarkMode }) => {
+const Background: FunctionComponent<Props> = ({ theme }) => {
   return (
     <picture className={classes.background}>
       <source
-        srcSet={isDarkMode ? desktopDarkBackground : desktopLightBackground}
+        srcSet={theme === "dark" ? desktopDarkBackground : desktopLightBackground}
         media="(min-width: 992px)"
       />
       <img
         className={classes.background__image}
-        src={isDarkMode ? mobileDarkBackground : mobileLightBackground}
+        src={theme === "dark" ? mobileDarkBackground : mobileLightBackground}
         alt="Background image"
       />
     </picture>

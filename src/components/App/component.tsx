@@ -1,35 +1,30 @@
 import Header from "@components/Header";
 import TodoInput from "@containers/todo-input";
 import TodoList from "@containers/todo-list";
-import {FunctionComponent, useEffect, useState} from "react";
+import {FunctionComponent, useEffect} from "react";
 import Background from "@components/Background";
 import Container from "@components/Container";
 import Foreground from "@components/Foreground";
 import TodoFilters from "@components/TodoFilterList";
 import Tip from "@components/Tip";
 import classes from "./style.module.css";
+import useLocalStorage from "@hooks/use-local-storage";
 
 const App: FunctionComponent = () => {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+  const [theme, setTheme] = useLocalStorage("todo-app-theme", "light");
 
   useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
     } else {
-      if (document.documentElement.classList.contains('dark')) {
-        document.documentElement.classList.remove('dark');
-      }
+      document.documentElement.classList.remove("dark");
     }
-  }, [isDarkMode]);
-
-  function toggleDarkMode() {
-    setIsDarkMode(!isDarkMode);
-  }
+  }, [theme]);
 
   return (
     <div className={classes.app}>
-      <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
-      <Background isDarkMode={isDarkMode}/>
+      <Header theme={theme} setTheme={setTheme}/>
+      <Background theme={theme}/>
       <Container>
         <Foreground margin>
           <TodoInput/>
