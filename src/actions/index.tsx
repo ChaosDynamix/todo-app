@@ -13,3 +13,5 @@ export const completeAllTodos = () => ({ type: types.COMPLETE_ALL_TODOS });
 export const clearCompleted = () => ({ type: types.CLEAR_COMPLETED });
 
 export const setVisibilityFilter = (filter: string) => ({ type: types.SET_VISIBILITY_FILTER, filter});
+
+export const reorderFromFilteredTodos = (filteredTodos: AppData.Todo[]) => ({ type: types.REORDER_FROM_FILTERED_TODOS, filteredTodos });

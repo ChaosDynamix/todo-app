@@ -25,7 +25,7 @@ const Todo: FunctionComponent<Props> = ({id, todo, completeTodo, deleteTodo}) =>
   }
 
   return (
-    <li className={classes.todo}>
+    <div className={classes.todo}>
       <div className={classes.todo__fixedSection}>
         <Switch
           id={id}
@@ -43,7 +43,7 @@ const Todo: FunctionComponent<Props> = ({id, todo, completeTodo, deleteTodo}) =>
           </svg>
         </button>
       </div>
-    </li>
+    </div>
   )
 }
 

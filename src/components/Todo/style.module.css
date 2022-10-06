@@ -10,10 +10,6 @@
   cursor: grab;
 }
 
-.todo:last-child {
-  margin-bottom: 0;
-}
-
 .todo__fixedSection {
   flex: none;
 }

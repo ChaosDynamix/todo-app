@@ -1,5 +1,5 @@
-import { createSelector } from 'reselect';
-import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from '@constants/todo-filters';
+import { createSelector } from "reselect";
+import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from "@constants/todo-filters";
 
 const getVisibilityFilter = (state) => state.visibilityFilter;
 

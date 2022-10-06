@@ -10,6 +10,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
     "classnames": "^2.3.2",
+    "framer-motion": "^7.5.2",
     "gsap": "^3.11.3",
     "nanoid": "^4.0.0",
     "react": "^18.2.0",

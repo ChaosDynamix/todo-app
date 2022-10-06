@@ -8,15 +8,15 @@ const mapStateToProps = (state) => ({
   filteredTodos: getVisibleTodos(state),
   todosCount: state.todos.length,
   completedCount: getCompletedTodoCount(state)
-})
+});
 
 const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators(TodoActions, dispatch)
-})
+});
 
 const VisibleTodoList = connect(
   mapStateToProps,
   mapDispatchToProps
-)(TodoList)
+)(TodoList);
 
-export default VisibleTodoList
+export default VisibleTodoList;
